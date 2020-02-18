@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_margin="7dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/drawericon"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Hi, Siddhant"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:layout_weight="5"
+            />
+        <ImageView
+            android:id="@+id/SongListBtn"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/mysongsbtn"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="22sp"
+        android:text="Your Artists"
+        android:textColor="@android:color/white"
+        android:layout_margin="12dp"
+        android:layout_weight="0.5"
+        android:layout_height="0dp" />
+    <ListView
+        android:id="@+id/ArtistLv"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="22sp"
+        android:text="Your Albums"
+        android:textColor="@android:color/white"
+        android:layout_weight="0.5"
+        android:layout_margin="12dp" />
+    <ListView
+        android:id="@+id/AlbumLv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="22sp"
+        android:text="PlayLists"
+        android:textColor="@android:color/white"
+        android:layout_weight="0.5"
+        android:layout_margin="12dp" />
+    <ListView
+        android:id="@+id/playlisLv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"/>
+
+
+
+</LinearLayout>
