@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mediaplayer:MediaPlayer
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -67,11 +66,9 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        if(mediaplayer!=null){
 
-            mediaplayer.stop()
-            mediaplayer.release()
-        }
+
+
 
 
 
