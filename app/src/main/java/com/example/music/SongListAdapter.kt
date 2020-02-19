@@ -28,13 +28,15 @@ class SongListAdapter(val song: ArrayList<Audio>) :
 
     inner class ItemVieHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+
+
         fun bind(audio: Audio) {
             itemView.apply {
 
                 SongName.text= audio.name
 
                 setOnClickListener {
-                    onItemClickListener?.onItemClick(audio)
+                    onItemClickListener?.onItemClick(audio,adapterPosition)
                 }
             }
 
@@ -43,5 +45,7 @@ class SongListAdapter(val song: ArrayList<Audio>) :
 }
 
 interface SongItemClickListener {
-    fun onItemClick(audios: Audio)
+    fun onItemClick(audios: Audio,position: Int){
+
+    }
 }

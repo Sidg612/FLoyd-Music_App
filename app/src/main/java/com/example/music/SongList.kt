@@ -1,6 +1,7 @@
 package com.example.music
 
 import android.content.ContentUris
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_song_list.*
+import java.text.FieldPosition
 import java.time.Duration
 import java.util.concurrent.TimeUnit
 
@@ -19,9 +21,14 @@ class SongList : AppCompatActivity() {
 
 
     private val onItemClicked = object :SongItemClickListener{
-        override fun onItemClick(audios: Audio) {
+        override fun onItemClick(audios: Audio, position:Int) {
 
-            Toast.makeText(this@SongList,"${audios}",Toast.LENGTH_SHORT).show()
+           // Toast.makeText(this@SongList,"${audios}+ /n/n +${position} ",Toast.LENGTH_SHORT).show()
+
+            startActivity(Intent(this@SongList,MainActivity::class.java)
+                .putExtra("SONG",audiolist)
+                .putExtra("POSITION", position)
+            )
         }
 
     }
