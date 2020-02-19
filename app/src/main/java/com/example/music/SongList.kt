@@ -23,12 +23,12 @@ class SongList : AppCompatActivity() {
     private val onItemClicked = object :SongItemClickListener{
         override fun onItemClick(audios: Audio, position:Int) {
 
-           // Toast.makeText(this@SongList,"${audios}+ /n/n +${position} ",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SongList,"${audios}+ /n/n +${position} ",Toast.LENGTH_SHORT).show()
 
-            startActivity(Intent(this@SongList,MainActivity::class.java)
-                .putExtra("SONG",audiolist)
-                .putExtra("POSITION", position)
-            )
+//            startActivity(Intent(this@SongList,MainActivity::class.java)
+//                .putExtra("SONG",audiolist)
+//                .putExtra("POSITION", position)
+//            )
         }
 
     }
@@ -88,7 +88,7 @@ class SongList : AppCompatActivity() {
             val sizeColumn = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE)
 
             while (cursor.moveToNext()) {
-                // Get values of columns for a given video.
+                // Get values of columns for a given Audio.
                 val id = cursor.getLong(idColumn)
                 val name = cursor.getString(nameColumn)
                 val duration = cursor.getInt(durationColumn)

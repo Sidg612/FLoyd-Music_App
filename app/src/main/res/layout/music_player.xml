@@ -28,6 +28,7 @@
            </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/songNameLabel"
             android:layout_alignParentRight="true"
             android:singleLine="true"
             android:ellipsize="marquee"
@@ -123,7 +124,7 @@
                     android:layout_height="60dp"
                     app:cardCornerRadius="30dp"
                     android:layout_gravity="center"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginRight="80dp"
                     android:elevation="30dp">
 
                     <ImageView
@@ -152,7 +153,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="80dp"
                 android:elevation="30dp"
                 app:cardCornerRadius="30dp">
 
